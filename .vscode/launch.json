@@ -1,0 +1,45 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable 'excel2json'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=excel2json",
+                    "--package=excel2json"
+                ],
+                "filter": {
+                    "name": "excel2json",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable 'excel2json'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=excel2json",
+                    "--package=excel2json"
+                ],
+                "filter": {
+                    "name": "excel2json",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        }
+    ]
+}
